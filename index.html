@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCSE AQA Physics Paper 2: Ultimate Revision Hub</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MV6yWlBceh/GwnW6qajgXtUhpvHQyUG+WSqayqWzPNkmKmT5/McpM+YzOpsyrG" crossorigin="anonymous">
+    <!-- Deferred KaTeX JS for performance -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzYCcmTiTRwgAD8I7KYKBO1AW75qd8JZ2wM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #151A2E; /* Darker background for track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4AF6F7; /* Vibrant cyan from new theme */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #97DEFF; /* Lighter cyan on hover */
+        }
+
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0C1021; /* Very deep midnight blue */
+            color: #E6EEFF; /* Soft light blue for primary text */
+            overflow-x: hidden;
+        }
+        .header-gradient {
+            background: rgba(12, 16, 33, 0.95); /* Slightly more opaque, matching new body bg */
+            backdrop-filter: blur(15px); /* Stronger blur for header */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4); /* Enhanced shadow */
+        }
+        .hero-gradient {
+            /* Deeper, more atmospheric radial gradient */
+            background: radial-gradient(circle at center, rgba(30, 38, 70, 0.7) 0%, rgba(12, 16, 33, 1) 70%); /* Matching new darker scheme */
+            position: relative;
+            overflow: hidden;
+        }
+        .card-bg {
+            background-color: #1B243B; /* Dark blue-gray for cards */
+            border: 1px solid #3B4257; /* Subtle, complementary border */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem; /* Ensure rounded-xl is applied via Tailwind */
+        }
+        .card-bg:hover {
+            transform: translateY(-8px); /* More pronounced lift */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 25px rgba(74, 246, 247, 0.6); /* Stronger shadow with a cyan glow */
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #4AF6F7, #6C5CE7); /* Vibrant Cyan/Purple Gradient */
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #6C5CE7, #4AF6F7); /* Reverse gradient on hover */
+            transform: translateY(-3px) scale(1.02); /* Slight scale and lift */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 30px rgba(74, 246, 247, 0.8); /* Stronger glow */
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2); /* Slightly more visible ripple */
+            border-radius: 50%;
+            transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: -1;
+        }
+        .btn-primary:hover::after {
+            width: 200%;
+            height: 200%;
+            opacity: 1;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px; /* Thicker underline */
+            bottom: -8px; /* Lower underline */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4AF6F7; /* Cyan accent */
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), padding 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-content.active {
+            max-height: 5000px; /* Large value to accommodate content */
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .triple-science-card {
+            border-left: 4px solid #ADFF00; /* Electric lime green for highlight */
+            background: linear-gradient(145deg, #2A2F45, #1B243B); /* Subtle gradient for triple science */
+        }
+        .practical-card {
+            border-left: 4px solid #FFD700; /* Gold for highlight */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-section {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+            100% { transform: scale(1); }
+        }
+        /* More variety for stars in hero section */
+        .star-1 { width: 1px; height: 1px; background-color: #A0D8EF; animation: twinkle 3s infinite ease-in-out alternate; }
+        .star-2 { width: 1.5px; height: 1.5px; background-color: #BBF7D0; animation: twinkle 4s infinite ease-in-out alternate 0.5s; }
+        .star-3 { width: 1px; height: 1px; background-color: #DDA0DD; animation: twinkle 2.5s infinite ease-in-out alternate 1s; }
+        .star-4 { width: 0.8px; height: 0.8px; background-color: #FFFFF0; animation: twinkle 3.5s infinite ease-in-out alternate 1.5s; }
+        .star-5 { width: 1.2px; height: 1.2px; background-color: #A78BFA; animation: twinkle 4.2s infinite ease-in-out alternate 2s; }
+        .star-6 { width: 1.8px; height: 1.8px; background-color: #4AF6F7; animation: twinkle 3.8s infinite ease-in-out alternate 2.5s; }
+
+
+        .quiz-option {
+            transition: all 0.2s ease-in-out;
+            background-color: #252D45; /* Darker blue-purple for quiz options */
+            border: 1px solid #4A506A; /* Matching card border */
+            cursor: pointer;
+            animation: pulse 1s infinite alternate; /* Subtle pulse animation */
+            animation-play-state: paused; /* Pause by default */
+        }
+        .quiz-option:hover {
+            transform: scale(1.02);
+            background-color: #3B4257; /* Darker hover for options */
+        }
+        .quiz-option.active-pulse {
+            animation-play-state: running; /* Run animation when active */
+        }
+        .quiz-option.correct {
+            background-color: #34D399 !important; /* Emerald Green */
+            color: white !important;
+            border-color: #10B981 !important;
+        }
+        .quiz-option.incorrect {
+            background-color: #F87171 !important; /* Red */
+            color: white !important;
+            border-color: #EF4444 !important;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header and Navigation -->
+    <header class="header-gradient p-4 fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold text-white tracking-wider">Physics P2 Hub</h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#hero" class="nav-link text-lg text-slate-300 hover:text-white">Home</a>
+                <a href="#topics" class="nav-link text-lg text-slate-300 hover:text-white">Topics</a>
+                <a href="#practicals" class="nav-link text-lg text-slate-300 hover:text-white">Practicals</a>
+                <a href="#formulas" class="nav-link text-lg text-slate-300 hover:text-white">Formulas</a>
+                <a href="#quiz" class="nav-link text-lg text-slate-300 hover:text-white">Quiz</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-slate-800 rounded-lg shadow-xl p-4">
+            <a href="#hero" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Home</a>
+            <a href="#topics" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Topics</a>
+            <a href="#practicals" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Practicals</a>
+            <a href="#formulas" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Formulas</a>
+            <a href="#quiz" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Quiz</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative flex items-center justify-center min-h-screen text-center hero-gradient pt-20">
+        <div class="z-10 p-8 max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-black text-white leading-tight mb-4 animate-fade-in-down">Conquer AQA Physics Paper 2</h2>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 animate-fade-in-up">The ultimate revision hub for Combined and Triple Science students. Master core concepts, key formulas, and test your knowledge to aim for Grade 9.</p>
+            <a href="#topics" class="btn-primary px-10 py-5 rounded-full text-xl font-bold text-white shadow-lg hover:scale-105 transform transition-transform duration-300">Start Revising Now</a>
+        </div>
+        <!-- Subtle star background -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute w-1 h-1 bg-white rounded-full star-1" style="top: 10%; left: 15%;"></div>
+            <div class="absolute w-1 h-1 bg-white rounded-full star-2" style="top: 25%; left: 80%;"></div>
+            <div class="absolute w-1 h-1 bg-white rounded-full star-3" style="top: 40%; left: 30%;"></div>
+            <div class="absolute w-1 h-1 bg-white rounded-full star-4" style="top: 60%; left: 60%;"></div>
+            <div class="absolute w-1 h-1 bg-white rounded-full star-5" style="top: 85%; left: 5%;"></div>
+            <div class="absolute w-1 h-1 bg-white rounded-full star-6" style="top: 70%; left: 90%;"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-20 px-4">
+
+        <!-- Topics Section -->
+        <section id="topics" class="mb-20 fade-in-section">
+            <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-cyan-400">Core Revision Topics</h3>
+            <div class="space-y-8">
+                <!-- Topic Card: Forces -->
+                <div class="card-bg p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">1. Forces</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-slate-300 mb-4 text-lg">Scalar vs. Vector quantities, contact and non-contact forces, gravity, resultant forces, and work done.</p>
+                        <h5 class="text-xl font-semibold text-cyan-300 mt-4 mb-2">Key Concepts</h5>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Scalars & Vectors:</strong> Scalars have magnitude only (speed, distance). Vectors have magnitude and direction (velocity, force).</li>
+                            <li><strong>Resultant Forces:</strong> The overall force on an object. If zero, the object is at rest or constant velocity (Newton's 1st Law).</li>
+                            <li><strong>Work Done:</strong> When a force causes an object to move. $W = Fs$.</li>
+                            <li><strong>Newton's Second Law:</strong> $F=ma$. The acceleration of an object is proportional to the resultant force.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Topic Card: Waves -->
+                <div class="card-bg p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">2. Waves</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-slate-300 mb-4 text-lg">Transverse and longitudinal waves, wave properties, reflection, refraction, sound waves and ultrasound.</p>
+                        <h5 class="text-xl font-semibold text-cyan-300 mt-4 mb-2">Key Concepts</h5>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Wave Properties:</strong> Amplitude, wavelength ($\lambda$), frequency ($f$), and period.</li>
+                            <li><strong>Wave Equation:</strong> wave speed (v) = frequency (f) × wavelength ($\lambda$).</li>
+                            <li><strong>Reflection:</strong> Angle of incidence = angle of reflection.</li>
+                            <li><strong>Refraction:</strong> Change of direction of a wave as it passes from one medium to another.</li>
+                            <li><strong>Ultrasound:</strong> Sound waves with frequencies higher than the upper audible limit of human hearing. Used in medical and industrial imaging.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Topic Card: Magnetism -->
+                <div class="card-bg p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">3. Magnetism and Electromagnetism</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-slate-300 mb-4 text-lg">Permanent and induced magnets, magnetic fields, the motor effect, and electromagnets.</p>
+                        <h5 class="text-xl font-semibold text-cyan-300 mt-4 mb-2">Key Concepts</h5>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Magnetic Fields:</strong> The region around a magnet where a force acts on another magnet or on a magnetic material.</li>
+                            <li><strong>Electromagnetism:</strong> A current flowing through a wire produces a magnetic field.</li>
+                            <li><strong>The Motor Effect:</strong> A force is exerted on a current-carrying wire in a magnetic field.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Topic Card: Space Physics (Triple) -->
+                <div class="triple-science-card card-bg p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <div class="flex items-center">
+                            <h4 class="text-2xl md:text-3xl font-bold text-slate-100">4. Space Physics</h4>
+                            <span class="ml-4 text-sm font-bold bg-lime-500 text-lime-900 px-3 py-1 rounded-full shadow">TRIPLE ONLY</span>
+                        </div>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-lime-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-slate-300 mb-4 text-lg">Detailed life cycle of stars, red-shift, the Big Bang theory, and the role of gravity in celestial orbits.</p>
+                        <h5 class="text-xl font-semibold text-lime-300 mt-4 mb-2">Key Concepts</h5>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Stellar Life Cycle:</strong> From nebula to main sequence, then branching into red giant/white dwarf path for sun-like stars, or red supergiant/supernova/neutron star/black hole for massive stars.</li>
+                            <li><strong>Red-Shift:</strong> The wavelength of light from distant galaxies is stretched, providing evidence for the expansion of the universe. The further the galaxy, the greater the red-shift.</li>
+                            <li><strong>Big Bang Theory:</strong> The universe started from a very small, hot, dense region and has been expanding ever since. Supported by red-shift and Cosmic Microwave Background Radiation (CMBR).</li>
+                            <li><strong>Orbital Motion:</strong> Gravity provides the centripetal force that keeps satellites and planets in stable orbits. For a stable orbit, if the speed changes, the radius must also change.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Required Practicals Section -->
+        <section id="practicals" class="mb-20 fade-in-section">
+            <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-yellow-400">Required Practicals Guide</h3>
+            <div class="space-y-8">
+                    <!-- Practical Card 1: Force and Extension -->
+                <div class="card-bg practical-card p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">Practical: Force & Extension</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content space-y-4 text-slate-300 text-lg">
+                        <div>
+                            <h5 class="text-xl font-semibold text-yellow-300 mb-2">Method</h5>
+                            <ol class="list-decimal list-inside space-y-1 pl-4">
+                                <li>Set up the apparatus: a clamp stand, a spring with a pointer, and a ruler positioned vertically.</li>
+                                <li>Measure the original (un-stretched) length of the spring.</li>
+                                <li>Hang a known weight (e.g., 100g = 1.0 N) on the spring and measure the new length.</li>
+                                <li>Calculate the extension (new length - original length).</li>
+                                <li>Repeat by adding more weights, recording the force and extension each time.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-semibold text-yellow-300 mb-2">Analysis</h5>
+                            <p>Plot a graph of force (y-axis) against extension (x-axis). It should be a straight line through the origin, showing force is directly proportional to extension (Hooke's Law: $F=ke$). The gradient of the line is the spring constant, $k$.</p>
+                        </div>
+                            <div>
+                            <h5 class="text-xl font-semibold text-yellow-300 mb-2">Variables & Errors</h5>
+                            <ul class="list-disc list-inside pl-4">
+                                <li><strong>Independent Variable:</strong> Force applied (N).</li>
+                                <li><strong>Dependent Variable:</strong> Extension of the spring (m).</li>
+                                <li><strong>Control Variable:</strong> The spring being used.</li>
+                                <li><strong>Potential Error:</strong> Parallax error when reading the ruler. Ensure your eye is level with the pointer. Do not stretch the spring beyond its limit of proportionality.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Practical Card 2: Waves -->
+                <div class="card-bg practical-card p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">Practical: Waves in a Ripple Tank</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content space-y-4 text-slate-300 text-lg">
+                        <div>
+                                <h5 class="text-xl font-semibold text-yellow-300 mb-2">Method</h5>
+                                <ol class="list-decimal list-inside space-y-1 pl-4">
+                                    <li>Set up a ripple tank with a shallow layer of water. Use a lamp above to project wave images onto paper below.</li>
+                                    <li>Turn on the motor to create waves of a constant frequency.</li>
+                                    <li>To measure wavelength ($\lambda$): Place a ruler on the paper and freeze the image (using a strobe light or phone camera) to measure the distance between two consecutive wavefronts.</li>
+                                    <li>To measure frequency ($f$): Count the number of waves passing a point in a set time (e.g., 10 seconds) and divide the count by the time.</li>
+                                    <li>Calculate wave speed using $v = f\lambda$.</li>
+                                </ol>
+                        </div>
+                        <div>
+                                <h5 class="text-xl font-semibold text-yellow-300 mb-2">Errors & Safety</h5>
+                                <p>It can be difficult to accurately measure the wavelength of moving waves, so freezing the image is crucial for reducing uncertainty. Be careful with water around electrical equipment (the lamp and motor).</p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Practical Card 3: Infrared Radiation -->
+                <div class="card-bg practical-card p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">Practical: Infrared Emission</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content space-y-4 text-slate-300 text-lg">
+                        <div>
+                                <h5 class="text-xl font-semibold text-yellow-300 mb-2">Method</h5>
+                                <ol class="list-decimal list-inside space-y-1 pl-4">
+                                    <li>Place a Leslie cube on a heat-proof mat.</li>
+                                    <li>Fill the cube with boiling water and replace the lid.</li>
+                                    <li>Use an infrared detector to measure the intensity of radiation emitted from each of the four surfaces (matt black, shiny black, white, shiny silver).</li>
+                                    <li>Ensure the detector is the same distance from each surface for a fair comparison.</li>
+                                </ol>
+                        </div>
+                            <div>
+                                <h5 class="text-xl font-semibold text-yellow-300 mb-2">Analysis & Conclusion</h5>
+                                <p>Compare the readings from the detector. You should find that the matt black surface is the best emitter of infrared radiation, and the shiny silver surface is the worst.</p>
+                        </div>
+                        <div>
+                                <h5 class="text-xl font-semibold text-yellow-300 mb-2">Variables & Safety</h5>
+                                <ul class="list-disc list-inside pl-4">
+                                    <li><strong>Independent Variable:</strong> The type of surface.</li>
+                                    <li><strong>Dependent Variable:</strong> The intensity of infrared radiation emitted.</li>
+                                    <li><strong>Control Variables:</strong> Distance from the cube, temperature of the water.</li>
+                                    <li><strong>Safety:</strong> Handle boiling water with extreme care to avoid scalding.</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formula Sheet Section -->
+        <section id="formulas" class="mb-20 fade-in-section">
+            <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-cyan-400">Essential Formulas</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Weight</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ W = mg $$</p>
+                    <p class="text-slate-400 text-base">Weight (N) = mass (kg) × gravitational field strength (N/kg)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Work Done</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ W = Fs $$</p>
+                    <p class="text-slate-400 text-base">Work done (J) = force (N) × distance (m)</p>
+                </div>
+                    <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Force (Springs)</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ F = ke $$</p>
+                    <p class="text-slate-400 text-base">Force (N) = spring constant (N/m) × extension (m)</p>
+                </div>
+                    <!-- Formula Card -->
+                    <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Moment of a force</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ M = Fd $$</p>
+                    <p class="text-slate-400 text-base">Moment of a force (Nm) = force (N) × distance (m)</p>
+                </div>
+                <!-- Formula Card -->
+                    <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Pressure</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ P = \frac{F}{A} $$</p>
+                    <p class="text-slate-400 text-base">Pressure (Pa) = force normal to a surface (N) / area of that surface (m²)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Distance</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ s = vt $$</p>
+                    <p class="text-slate-400 text-base">Distance (m) = speed (m/s) × time (s)</p>
+                </div>
+                    <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Acceleration</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ a = \frac{\Delta v}{t} $$</p>
+                    <p class="text-slate-400 text-base">Acceleration (m/s²) = change in velocity (m/s) / time taken (s)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Resultant Force</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ F = ma $$</p>
+                    <p class="text-slate-400 text-base">Resultant Force (N) = mass (kg) × acceleration (m/s²)</p>
+                </div>
+                    <!-- Formula Card -->
+                    <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Momentum</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ p = mv $$</p>
+                    <p class="text-slate-400 text-base">Momentum (kg m/s) = mass (kg) × velocity (m/s)</p>
+                </div>
+                    <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Wave speed</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ v = f \lambda $$</p>
+                    <p class="text-slate-400 text-base">Wave speed (m/s) = frequency (Hz) × wavelength (m)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Quiz Section -->
+        <section id="quiz" class="fade-in-section">
+            <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-cyan-400">Test Your Knowledge</h3>
+            <div id="quiz-container" class="card-bg p-8 rounded-xl max-w-3xl mx-auto shadow-xl">
+                <!-- Quiz content will be injected here by JavaScript -->
+                <div id="quiz-content">
+                    <!-- Questions and options go here -->
+                </div>
+                <div id="quiz-feedback" class="mt-4 text-center text-lg font-semibold"></div>
+                <div id="quiz-navigation" class="mt-6 flex justify-between">
+                    <button id="prev-question-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white opacity-50 cursor-not-allowed" disabled>Previous</button>
+                    <button id="next-question-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white">Next</button>
+                    <button id="submit-quiz-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white hidden">Submit Quiz</button>
+                    <button id="restart-quiz-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white hidden">Restart Quiz</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-center p-8 mt-10 rounded-t-lg shadow-inner">
+        <p class="text-slate-400 text-lg">&copy; 2025 Physics P2 Revision Hub | Built for AQA GCSE Success</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This function call will render all math expressions on the page
+            renderMathInElement(document.body, {
+                // customised options
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                // • rendering keys, e.g.:
+                throwOnError: false
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Accordion functionality
+            const accordions = document.querySelectorAll('.accordion-header');
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', () => {
+                    const content = accordion.nextElementSibling;
+                    const icon = accordion.querySelector('svg');
+
+                    // Close all other accordions
+                    accordions.forEach(otherAccordion => {
+                        if (otherAccordion !== accordion) {
+                            otherAccordion.nextElementSibling.classList.remove('active');
+                            otherAccordion.querySelector('svg').classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Toggle current accordion
+                    content.classList.toggle('active');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Smooth scrolling and active nav link
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 90; // Adjusted offset for fixed header
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu on click
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for animations and active nav state
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        const id = entry.target.getAttribute('id');
+                        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                        if (activeLink) activeLink.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Quiz Logic
+            const quizContainer = document.getElementById('quiz-container');
+            const quizContent = document.getElementById('quiz-content');
+            const quizFeedback = document.getElementById('quiz-feedback');
+            const prevQuestionBtn = document.getElementById('prev-question-btn');
+            const nextQuestionBtn = document.getElementById('next-question-btn');
+            const submitQuizBtn = document.getElementById('submit-quiz-btn');
+            const restartQuizBtn = document.getElementById('restart-quiz-btn');
+
+            let currentQuestionIndex = 0;
+            let score = 0;
+            let userAnswers = []; // To store user's selected answers
+
+            const quizData = [
+                {
+                    question: "Which of these is a vector quantity?",
+                    options: ["Speed", "Distance", "Force", "Mass"],
+                    answer: "Force"
+                },
+                {
+                    question: "What is the unit of force?",
+                    options: ["Joule", "Watt", "Newton", "Pascal"],
+                    answer: "Newton"
+                },
+                {
+                    question: "According to Hooke's Law, force is directly proportional to what?",
+                    options: ["Mass", "Acceleration", "Extension", "Time"],
+                    answer: "Extension"
+                },
+                {
+                    question: "Which type of wave requires a medium to travel?",
+                    options: ["Electromagnetic wave", "Transverse wave", "Longitudinal wave", "Sound wave"],
+                    answer: "Sound wave"
+                },
+                {
+                    question: "What phenomenon causes light to bend when it passes from air to water?",
+                    options: ["Reflection", "Refraction", "Diffraction", "Interference"],
+                    answer: "Refraction"
+                },
+                {
+                    question: "Which of these is used to detect infrared radiation in the Leslie cube experiment?",
+                    options: ["Thermometer", "Ammeter", "Voltmeter", "Infrared detector"],
+                    answer: "Infrared detector"
+                },
+                {
+                    question: "What is the formula for work done?",
+                    options: ["W = Fs", "W = mg", "W = P/t", "W = F/A"],
+                    answer: "W = Fs"
+                },
+                {
+                    question: "The Big Bang Theory is supported by the observation of what?",
+                    options: ["Blue-shift", "Red-shift", "Black holes", "Supernovas"],
+                    answer: "Red-shift"
+                },
+                {
+                    question: "What provides the centripetal force for planets in orbit?",
+                    options: ["Air resistance", "Thrust", "Gravity", "Friction"],
+                    answer: "Gravity"
+                },
+                {
+                    question: "What happens to the frequency of a wave if its speed increases and wavelength remains constant?",
+                    options: ["Increases", "Decreases", "Stays the same", "Becomes zero"],
+                    answer: "Increases"
+                }
+            ];
+
+            function loadQuestion() {
+                quizFeedback.textContent = ''; // Clear feedback
+                const currentQuestion = quizData[currentQuestionIndex];
+                
+                quizContent.innerHTML = `
+                    <p class="text-xl font-semibold mb-6 text-center text-slate-100">${currentQuestionIndex + 1}. ${currentQuestion.question}</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${currentQuestion.options.map((option, index) => `
+                            <button class="quiz-option p-4 rounded-lg shadow-md text-left text-lg focus:outline-none transition-all duration-200 ease-in-out ${userAnswers[currentQuestionIndex] === option ? 'active-pulse' : ''}" data-option="${option}">
+                                ${option}
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+
+                // Add event listeners to options
+                quizContent.querySelectorAll('.quiz-option').forEach(button => {
+                    button.addEventListener('click', (e) => selectAnswer(e.target.dataset.option));
+                });
+
+                updateNavigationButtons();
+                // Re-render KaTeX if any math is dynamically added (though unlikely in current quiz questions)
+                renderMathInElement(quizContent, { throwOnError: false });
+            }
+
+            function selectAnswer(selectedOption) {
+                userAnswers[currentQuestionIndex] = selectedOption;
+                quizContent.querySelectorAll('.quiz-option').forEach(button => {
+                    button.classList.remove('active-pulse');
+                    if (button.dataset.option === selectedOption) {
+                        button.classList.add('active-pulse');
+                    }
+                });
+            }
+
+            function updateNavigationButtons() {
+                prevQuestionBtn.disabled = currentQuestionIndex === 0;
+                if (currentQuestionIndex === 0) {
+                    prevQuestionBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    prevQuestionBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+
+                if (currentQuestionIndex === quizData.length - 1) {
+                    nextQuestionBtn.classList.add('hidden');
+                    submitQuizBtn.classList.remove('hidden');
+                } else {
+                    nextQuestionBtn.classList.remove('hidden');
+                    submitQuizBtn.classList.add('hidden');
+                }
+                restartQuizBtn.classList.add('hidden'); // Hide restart until quiz is submitted
+            }
+
+            function showNextQuestion() {
+                if (currentQuestionIndex < quizData.length - 1) {
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+            }
+
+            function showPrevQuestion() {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    loadQuestion();
+                }
+            }
+
+            function submitQuiz() {
+                score = 0;
+                let resultsHTML = '<h4 class="text-3xl font-bold text-center text-cyan-300 mb-6">Quiz Results</h4>';
+                resultsHTML += '<ul class="list-none space-y-4 text-left">';
+
+                quizData.forEach((q, index) => {
+                    const userAnswer = userAnswers[index];
+                    const isCorrect = userAnswer === q.answer;
+                    
+                    if (isCorrect) {
+                        score++;
+                        resultsHTML += `<li class="text-lg text-green-400"><span class="font-bold">Q${index + 1}:</span> ${q.question} <span class="float-right">&#10003; Correct</span></li>`;
+                    } else {
+                        resultsHTML += `<li class="text-lg text-red-400"><span class="font-bold">Q${index + 1}:</span> ${q.question} <br> Your Answer: <span class="font-semibold">${userAnswer || 'Not answered'}</span> <br> Correct Answer: <span class="font-semibold text-green-400">${q.answer}</span> &#10007; Incorrect</li>`;
+                    }
+                });
+
+                resultsHTML += '</ul>';
+                resultsHTML += `<p class="text-2xl font-bold mt-8 text-center text-white">Your Score: ${score} / ${quizData.length}</p>`;
+                
+                quizContent.innerHTML = resultsHTML;
+                quizFeedback.textContent = ''; // Clear any previous feedback
+
+                // Hide navigation, show restart
+                prevQuestionBtn.classList.add('hidden');
+                nextQuestionBtn.classList.add('hidden');
+                submitQuizBtn.classList.add('hidden');
+                restartQuizBtn.classList.remove('hidden');
+
+                // Re-render KaTeX if any math was in quiz questions (for robustness)
+                renderMathInElement(quizContent, { throwOnError: false });
+            }
+
+            function restartQuiz() {
+                currentQuestionIndex = 0;
+                score = 0;
+                userAnswers = [];
+                loadQuestion();
+                restartQuizBtn.classList.add('hidden');
+                nextQuestionBtn.classList.remove('hidden'); // Show next button to start
+            }
+
+            // Event Listeners for quiz navigation
+            nextQuestionBtn.addEventListener('click', showNextQuestion);
+            prevQuestionBtn.addEventListener('click', showPrevQuestion);
+            submitQuizBtn.addEventListener('click', submitQuiz);
+            restartQuizBtn.addEventListener('click', restartQuiz);
+
+            // Initial load of the first question
+            loadQuestion();
+        });
+    </script>
+</body>
+</html>
