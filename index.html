@@ -187,6 +187,7 @@
                 <a href="#topics" class="nav-link text-lg text-slate-300 hover:text-white">Topics</a>
                 <a href="#practicals" class="nav-link text-lg text-slate-300 hover:text-white">Practicals</a>
                 <a href="#formulas" class="nav-link text-lg text-slate-300 hover:text-white">Formulas</a>
+                <a href="#predicted-content" class="nav-link text-lg text-slate-300 hover:text-white">Predicted</a>
                 <a href="#quiz" class="nav-link text-lg text-slate-300 hover:text-white">Quiz</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
@@ -198,6 +199,7 @@
             <a href="#topics" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Topics</a>
             <a href="#practicals" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Practicals</a>
             <a href="#formulas" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Formulas</a>
+            <a href="#predicted-content" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Predicted</a>
             <a href="#quiz" class="block py-3 px-4 text-slate-300 hover:bg-slate-700 rounded-md transition duration-200">Quiz</a>
         </div>
     </header>
@@ -435,7 +437,7 @@
                     <p class="text-slate-400 text-base">Distance (m) = speed (m/s) × time (s)</p>
                 </div>
                     <!-- Formula Card -->
-                <div class="card-bg p-6 rounded-lg text-center">
+                    <div class="card-bg p-6 rounded-lg text-center">
                     <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Acceleration</h4>
                     <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ a = \frac{\Delta v}{t} $$</p>
                     <p class="text-slate-400 text-base">Acceleration (m/s²) = change in velocity (m/s) / time taken (s)</p>
@@ -448,33 +450,158 @@
                 </div>
                     <!-- Formula Card -->
                     <div class="card-bg p-6 rounded-lg text-center">
-                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Momentum</h4>
-                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ p = mv $$</p>
-                    <p class="text-slate-400 text-base">Momentum (kg m/s) = mass (kg) × velocity (m/s)</p>
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Kinetic Energy</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ E_k = \frac{1}{2}mv^2 $$</p>
+                    <p class="text-slate-400 text-base">Kinetic Energy (J) = 0.5 × mass (kg) × speed² (m/s)²</p>
                 </div>
-                    <!-- Formula Card -->
+                <!-- Formula Card -->
                 <div class="card-bg p-6 rounded-lg text-center">
-                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Wave speed</h4>
-                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ v = f \lambda $$</p>
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Gravitational Potential Energy</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ E_p = mgh $$</p>
+                    <p class="text-slate-400 text-base">Gravitational Potential Energy (J) = mass (kg) × gravitational field strength (N/kg) × height (m)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Power (Energy Transferred)</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ P = \frac{E}{t} $$</p>
+                    <p class="text-slate-400 text-base">Power (W) = energy transferred (J) / time (s)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Power (Work Done)</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ P = \frac{W}{t} $$</p>
+                    <p class="text-slate-400 text-base">Power (W) = work done (J) / time (s)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Efficiency</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ Efficiency = \frac{\text{useful energy transferred}}{\text{total energy input}} $$</p>
+                    <p class="text-slate-400 text-base">Efficiency = useful energy output / total energy input (often × 100% for percentage)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Wave Speed</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ v = f\lambda $$</p>
                     <p class="text-slate-400 text-base">Wave speed (m/s) = frequency (Hz) × wavelength (m)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Period of a Wave</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ T = \frac{1}{f} $$</p>
+                    <p class="text-slate-400 text-base">Period (s) = 1 / frequency (Hz)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Magnification (Lenses)</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ M = \frac{\text{image height}}{\text{object height}} $$</p>
+                    <p class="text-slate-400 text-base">Magnification = image height / object height</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Force on a Conductor</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ F = BIL $$</p>
+                    <p class="text-slate-400 text-base">Force (N) = magnetic flux density (T) × current (A) × length (m)</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Transformer Equation</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ \frac{V_p}{V_s} = \frac{n_p}{n_s} $$</p>
+                    <p class="text-slate-400 text-base">Primary PD / Secondary PD = Primary turns / Secondary turns</p>
+                </div>
+                <!-- Formula Card -->
+                <div class="card-bg p-6 rounded-lg text-center">
+                    <h4 class="text-xl md:text-2xl font-bold text-slate-100 mb-3">Transformer Power</h4>
+                    <p class="text-3xl md:text-4xl font-mono text-lime-300 mb-2">$$ V_p I_p = V_s I_s $$</p>
+                    <p class="text-slate-400 text-base">Primary PD × Primary Current = Secondary PD × Secondary Current (for 100% efficiency)</p>
                 </div>
             </div>
         </section>
 
-        <!-- Interactive Quiz Section -->
-        <section id="quiz" class="fade-in-section">
-            <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-cyan-400">Test Your Knowledge</h3>
-            <div id="quiz-container" class="card-bg p-8 rounded-xl max-w-3xl mx-auto shadow-xl">
-                <!-- Quiz content will be injected here by JavaScript -->
-                <div id="quiz-content">
-                    <!-- Questions and options go here -->
+        <!-- Predicted Content Section -->
+        <section id="predicted-content" class="mb-20 fade-in-section">
+            <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-purple-400">Predicted Content & Key Areas for 2025</h3>
+            <p class="text-slate-300 text-lg text-center mb-8">Based on recent exam trends and the PMT Predicted Paper 2025, here are some high-probability topics, question types, and practical considerations for both Combined and Triple Science students.</p>
+
+            <div class="space-y-8">
+                <!-- Predicted Topics Card -->
+                <div class="card-bg p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">Highly Predicted Topics & Questions</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <h5 class="text-xl font-semibold text-purple-300 mt-4 mb-2">Forces and Motion</h5>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Calculations:</strong> Expect questions involving $F=ma$, momentum ($p=mv$), work done ($W=Fs$), elastic potential energy ($E_p = \frac{1}{2}kx^2$), and kinetic energy ($E_k = \frac{1}{2}mv^2$). Be prepared for multi-step calculations.</li>
+                            <li><strong>Stopping Distance:</strong> Detailed explanations of thinking distance and braking distance, and factors affecting them (e.g., driver's reaction time, road conditions, vehicle condition).</li>
+                            <li><strong>Collisions & Safety:</strong> Conservation of momentum in closed systems. How safety features like airbags and seatbelts reduce injury by increasing impact time (and thus reducing force).</li>
+                            <li><strong>Moments and Levers:</strong> Understanding and calculating moments. Applying the principle of moments for equilibrium.</li>
+                            <li><strong>Pressure in Fluids:</strong> Calculations involving pressure, force, and area, including pressure in liquids ($P = h\rho g$). Explaining concepts like terminal velocity.</li>
+                        </ul>
+
+                        <h5 class="text-xl font-semibold text-purple-300 mt-4 mb-2">Waves</h5>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Wave Properties & Equation:</strong> Firm understanding of transverse vs. longitudinal waves, amplitude, wavelength, frequency, and wave speed. Expect calculations using $v=f\lambda$.</li>
+                            <li><strong>Reflection and Refraction:</strong> Ray diagrams for lenses (convex and concave) and mirrors. Explanations of how light bends when entering different media, including changes in speed and wavelength.</li>
+                            <li><strong>Electromagnetic Spectrum:</strong> Properties and uses of different EM waves (e.g., radio waves for communication, X-rays for imaging). Comparisons between EM waves and sound waves.</li>
+                            <li><strong>Infrared Radiation:</strong> Emission and absorption by different surfaces (e.g., Leslie Cube findings - matt black is best emitter/absorber).</li>
+                        </ul>
+
+                        <h5 class="text-xl font-semibold text-purple-300 mt-4 mb-2">Electricity and Magnetism</h5>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Motor Effect:</strong> Explanation of how a force is exerted on a current-carrying wire in a magnetic field, and how this causes rotation in a motor. Fleming's Left-Hand Rule is key.</li>
+                            <li><strong>Electromagnets:</strong> Factors affecting the strength of an electromagnet (current, number of turns, core material). Applications like electric bells or circuit breakers.</li>
+                            <li><strong>Transformers & Generators:</strong> How transformers change voltage (step-up/step-down) and the role of the iron core. Explanation of how alternators and dynamos induce current (electromagnetic induction) and the function of slip rings/commutators.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="quiz-feedback" class="mt-4 text-center text-lg font-semibold"></div>
-                <div id="quiz-navigation" class="mt-6 flex justify-between">
-                    <button id="prev-question-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white opacity-50 cursor-not-allowed" disabled>Previous</button>
-                    <button id="next-question-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white">Next</button>
-                    <button id="submit-quiz-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white hidden">Submit Quiz</button>
-                    <button id="restart-quiz-btn" class="btn-primary px-6 py-3 rounded-md text-base font-semibold text-white hidden">Restart Quiz</button>
+
+                <!-- Predicted Practicals Card -->
+                <div class="card-bg practical-card p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <h4 class="text-2xl md:text-3xl font-bold text-slate-100">Key Practicals for Paper 2</h4>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-slate-300 mb-4 text-lg">Detailed knowledge of the methods, variables, and potential errors for these practicals is essential, as exam questions often involve analyzing or describing them.</p>
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Investigating the Extension of a Spring:</strong> Understanding Hooke's Law ($F=ke$), plotting force-extension graphs, and identifying the limit of proportionality. (See 'Force & Extension' practical in Practicals section).</li>
+                            <li><strong>Investigating Waves in a Ripple Tank:</strong> Measuring wavelength and frequency to calculate wave speed. Observing reflection and refraction phenomena. (See 'Waves in a Ripple Tank' practical in Practicals section).</li>
+                            <li><strong>Investigating Infrared Emission and Absorption:</strong> Using a Leslie Cube to show that matt black surfaces are the best emitters/absorbers. (See 'Infrared Emission' practical in Practicals section).</li>
+                            <li><strong>Investigating Refraction of Light:</strong> Using a ray box and glass block to determine how the angle of refraction varies with the angle of incidence. Drawing ray diagrams accurately.</li>
+                            <li><strong>Investigating the Strength of an Electromagnet:</strong> Factors affecting strength (number of turns, current, core material).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Triple Science Exclusive Content -->
+                <div class="triple-science-card card-bg p-6 rounded-xl shadow-lg">
+                    <button class="accordion-header w-full text-left flex justify-between items-center py-2">
+                        <div class="flex items-center">
+                            <h4 class="text-2xl md:text-3xl font-bold text-slate-100">Triple Science Exclusives (Space Physics)</h4>
+                            <span class="ml-4 text-sm font-bold bg-lime-500 text-lime-900 px-3 py-1 rounded-full shadow">TRIPLE ONLY</span>
+                        </div>
+                        <svg class="w-8 h-8 transform transition-transform duration-500 text-lime-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <ul class="list-disc list-inside text-slate-300 space-y-2 text-base pl-4">
+                            <li><strong>Life Cycle of Stars:</strong> Detailed comparison of the life cycles of stars with similar mass to the Sun (red giant, white dwarf, planetary nebula) vs. stars much more massive than the Sun (red supergiant, supernova, neutron star, black hole). Understanding the role of nuclear fusion and formation of elements.</li>
+                            <li><strong>Red-shift & Big Bang Theory:</strong> In-depth explanation of red-shift as evidence for an expanding universe. How this supports the Big Bang theory. Understanding Cosmic Microwave Background Radiation (CMBR) as further evidence.</li>
+                            <li><strong>Orbital Motion:</strong> Gravitational force as the centripetal force for satellites and planets. Relationship between orbital speed and radius for stable orbits.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Quiz Section (Placeholder) -->
+        <section id="quiz" class="mb-20 fade-in-section">
+            <h3 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-rose-400">Test Your Knowledge: Quick Quiz</h3>
+            <div class="card-bg p-6 rounded-xl shadow-lg max-w-2xl mx-auto">
+                <p class="text-slate-300 text-lg mb-4 text-center">Coming Soon! A dynamic quiz to test your understanding of Paper 2 topics.</p>
+                <div class="text-center">
+                    <button class="btn-primary px-6 py-3 rounded-md text-lg font-bold text-white opacity-50 cursor-not-allowed">Start Quiz</button>
                 </div>
             </div>
         </section>
@@ -482,279 +609,89 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-center p-8 mt-10 rounded-t-lg shadow-inner">
-        <p class="text-slate-400 text-lg">&copy; 2025 Physics P2 Revision Hub | Built for AQA GCSE Success</p>
+    <footer class="bg-gray-900 p-8 text-center text-slate-400 text-sm">
+        <p>&copy; 2025 GCSE Physics P2 Hub. All rights reserved. Content for educational purposes only.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // This function call will render all math expressions on the page
+        // KaTeX auto-render configuration
+        document.addEventListener("DOMContentLoaded", function() {
             renderMathInElement(document.body, {
-                // customised options
+                // custom delimiters for inline math (optional)
                 delimiters: [
-                    {left: '$$', right: '$$', display: true},
-                    {left: '$', right: '$', display: false},
-                    {left: '\\(', right: '\\)', display: false},
-                    {left: '\\[', right: '\\]', display: true}
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
                 ],
-                // • rendering keys, e.g.:
-                throwOnError: false
+                // add displayMode: true for block equations
+                throwOnError : false
             });
-
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Accordion functionality
-            const accordions = document.querySelectorAll('.accordion-header');
-            accordions.forEach(accordion => {
-                accordion.addEventListener('click', () => {
-                    const content = accordion.nextElementSibling;
-                    const icon = accordion.querySelector('svg');
-
-                    // Close all other accordions
-                    accordions.forEach(otherAccordion => {
-                        if (otherAccordion !== accordion) {
-                            otherAccordion.nextElementSibling.classList.remove('active');
-                            otherAccordion.querySelector('svg').classList.remove('rotate-180');
-                        }
-                    });
-
-                    // Toggle current accordion
-                    content.classList.toggle('active');
-                    icon.classList.toggle('rotate-180');
-                });
-            });
-
-            // Smooth scrolling and active nav link
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        const headerOffset = 90; // Adjusted offset for fixed header
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                        // Close mobile menu on click
-                        if (!mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                        }
-                    }
-                });
-            });
-
-            // Intersection Observer for animations and active nav state
-            const sections = document.querySelectorAll('section');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        const id = entry.target.getAttribute('id');
-                        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-                        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-                        if (activeLink) activeLink.classList.add('active');
-                    }
-                });
-            }, { threshold: 0.4 });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-            
-            // Quiz Logic
-            const quizContainer = document.getElementById('quiz-container');
-            const quizContent = document.getElementById('quiz-content');
-            const quizFeedback = document.getElementById('quiz-feedback');
-            const prevQuestionBtn = document.getElementById('prev-question-btn');
-            const nextQuestionBtn = document.getElementById('next-question-btn');
-            const submitQuizBtn = document.getElementById('submit-quiz-btn');
-            const restartQuizBtn = document.getElementById('restart-quiz-btn');
-
-            let currentQuestionIndex = 0;
-            let score = 0;
-            let userAnswers = []; // To store user's selected answers
-
-            const quizData = [
-                {
-                    question: "Which of these is a vector quantity?",
-                    options: ["Speed", "Distance", "Force", "Mass"],
-                    answer: "Force"
-                },
-                {
-                    question: "What is the unit of force?",
-                    options: ["Joule", "Watt", "Newton", "Pascal"],
-                    answer: "Newton"
-                },
-                {
-                    question: "According to Hooke's Law, force is directly proportional to what?",
-                    options: ["Mass", "Acceleration", "Extension", "Time"],
-                    answer: "Extension"
-                },
-                {
-                    question: "Which type of wave requires a medium to travel?",
-                    options: ["Electromagnetic wave", "Transverse wave", "Longitudinal wave", "Sound wave"],
-                    answer: "Sound wave"
-                },
-                {
-                    question: "What phenomenon causes light to bend when it passes from air to water?",
-                    options: ["Reflection", "Refraction", "Diffraction", "Interference"],
-                    answer: "Refraction"
-                },
-                {
-                    question: "Which of these is used to detect infrared radiation in the Leslie cube experiment?",
-                    options: ["Thermometer", "Ammeter", "Voltmeter", "Infrared detector"],
-                    answer: "Infrared detector"
-                },
-                {
-                    question: "What is the formula for work done?",
-                    options: ["W = Fs", "W = mg", "W = P/t", "W = F/A"],
-                    answer: "W = Fs"
-                },
-                {
-                    question: "The Big Bang Theory is supported by the observation of what?",
-                    options: ["Blue-shift", "Red-shift", "Black holes", "Supernovas"],
-                    answer: "Red-shift"
-                },
-                {
-                    question: "What provides the centripetal force for planets in orbit?",
-                    options: ["Air resistance", "Thrust", "Gravity", "Friction"],
-                    answer: "Gravity"
-                },
-                {
-                    question: "What happens to the frequency of a wave if its speed increases and wavelength remains constant?",
-                    options: ["Increases", "Decreases", "Stays the same", "Becomes zero"],
-                    answer: "Increases"
-                }
-            ];
-
-            function loadQuestion() {
-                quizFeedback.textContent = ''; // Clear feedback
-                const currentQuestion = quizData[currentQuestionIndex];
-                
-                quizContent.innerHTML = `
-                    <p class="text-xl font-semibold mb-6 text-center text-slate-100">${currentQuestionIndex + 1}. ${currentQuestion.question}</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        ${currentQuestion.options.map((option, index) => `
-                            <button class="quiz-option p-4 rounded-lg shadow-md text-left text-lg focus:outline-none transition-all duration-200 ease-in-out ${userAnswers[currentQuestionIndex] === option ? 'active-pulse' : ''}" data-option="${option}">
-                                ${option}
-                            </button>
-                        `).join('')}
-                    </div>
-                `;
-
-                // Add event listeners to options
-                quizContent.querySelectorAll('.quiz-option').forEach(button => {
-                    button.addEventListener('click', (e) => selectAnswer(e.target.dataset.option));
-                });
-
-                updateNavigationButtons();
-                // Re-render KaTeX if any math is dynamically added (though unlikely in current quiz questions)
-                renderMathInElement(quizContent, { throwOnError: false });
-            }
-
-            function selectAnswer(selectedOption) {
-                userAnswers[currentQuestionIndex] = selectedOption;
-                quizContent.querySelectorAll('.quiz-option').forEach(button => {
-                    button.classList.remove('active-pulse');
-                    if (button.dataset.option === selectedOption) {
-                        button.classList.add('active-pulse');
-                    }
-                });
-            }
-
-            function updateNavigationButtons() {
-                prevQuestionBtn.disabled = currentQuestionIndex === 0;
-                if (currentQuestionIndex === 0) {
-                    prevQuestionBtn.classList.add('opacity-50', 'cursor-not-allowed');
-                } else {
-                    prevQuestionBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-                }
-
-                if (currentQuestionIndex === quizData.length - 1) {
-                    nextQuestionBtn.classList.add('hidden');
-                    submitQuizBtn.classList.remove('hidden');
-                } else {
-                    nextQuestionBtn.classList.remove('hidden');
-                    submitQuizBtn.classList.add('hidden');
-                }
-                restartQuizBtn.classList.add('hidden'); // Hide restart until quiz is submitted
-            }
-
-            function showNextQuestion() {
-                if (currentQuestionIndex < quizData.length - 1) {
-                    currentQuestionIndex++;
-                    loadQuestion();
-                }
-            }
-
-            function showPrevQuestion() {
-                if (currentQuestionIndex > 0) {
-                    currentQuestionIndex--;
-                    loadQuestion();
-                }
-            }
-
-            function submitQuiz() {
-                score = 0;
-                let resultsHTML = '<h4 class="text-3xl font-bold text-center text-cyan-300 mb-6">Quiz Results</h4>';
-                resultsHTML += '<ul class="list-none space-y-4 text-left">';
-
-                quizData.forEach((q, index) => {
-                    const userAnswer = userAnswers[index];
-                    const isCorrect = userAnswer === q.answer;
-                    
-                    if (isCorrect) {
-                        score++;
-                        resultsHTML += `<li class="text-lg text-green-400"><span class="font-bold">Q${index + 1}:</span> ${q.question} <span class="float-right">&#10003; Correct</span></li>`;
-                    } else {
-                        resultsHTML += `<li class="text-lg text-red-400"><span class="font-bold">Q${index + 1}:</span> ${q.question} <br> Your Answer: <span class="font-semibold">${userAnswer || 'Not answered'}</span> <br> Correct Answer: <span class="font-semibold text-green-400">${q.answer}</span> &#10007; Incorrect</li>`;
-                    }
-                });
-
-                resultsHTML += '</ul>';
-                resultsHTML += `<p class="text-2xl font-bold mt-8 text-center text-white">Your Score: ${score} / ${quizData.length}</p>`;
-                
-                quizContent.innerHTML = resultsHTML;
-                quizFeedback.textContent = ''; // Clear any previous feedback
-
-                // Hide navigation, show restart
-                prevQuestionBtn.classList.add('hidden');
-                nextQuestionBtn.classList.add('hidden');
-                submitQuizBtn.classList.add('hidden');
-                restartQuizBtn.classList.remove('hidden');
-
-                // Re-render KaTeX if any math was in quiz questions (for robustness)
-                renderMathInElement(quizContent, { throwOnError: false });
-            }
-
-            function restartQuiz() {
-                currentQuestionIndex = 0;
-                score = 0;
-                userAnswers = [];
-                loadQuestion();
-                restartQuizBtn.classList.add('hidden');
-                nextQuestionBtn.classList.remove('hidden'); // Show next button to start
-            }
-
-            // Event Listeners for quiz navigation
-            nextQuestionBtn.addEventListener('click', showNextQuestion);
-            prevQuestionBtn.addEventListener('click', showPrevQuestion);
-            submitQuizBtn.addEventListener('click', submitQuiz);
-            restartQuizBtn.addEventListener('click', restartQuiz);
-
-            // Initial load of the first question
-            loadQuestion();
         });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+
+                accordionContent.classList.toggle('active');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Remove active from all and add to clicked
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Set active class on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100 && pageYOffset < sectionTop + sectionHeight - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
     </script>
 </body>
 </html>
